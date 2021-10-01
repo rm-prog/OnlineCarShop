@@ -8,16 +8,31 @@ const HeaderNav = () => {
         display: "flex",
         flexWrap: "wrap",
         flexDirection: "row",
-        justifyContent: "space-between",
         alignItems: "baseline",
+        padding: "10px",
+        backgroundColor: "#FFDB3B"
     }
 
     const headerStyle = {
-        fontSize: "1.7rem"
+        width: "300px",
+        textAlign: "center",
+        fontSize: "2rem",
+        fontFamily: "Stick No Bills, sans-serif",
+        fontWeight: "500"
     }
 
     const logBtnStyle = {
-        fontSize: "1.2rem"
+        width: "170px",
+        textAlign: "right",
+        fontSize: "1.5rem",
+        fontFamily: "Gemunu Libre, sans-serif"
+    }
+
+    const signBtnStyle = {
+        width: "120px",
+        textAlign: "center",
+        fontSize: "1.5rem",
+        fontFamily: "Gemunu Libre, sans-serif"
     }
 
     return (
@@ -28,7 +43,7 @@ const HeaderNav = () => {
             <div style={logBtnStyle}>
                 Log In
             </div>
-            <div>
+            <div style={signBtnStyle}>
                 Sign Up
             </div>
         </nav>
