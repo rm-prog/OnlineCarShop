@@ -6,3 +6,15 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.sellCarBtn {
+    color: "black"; 
+    border-color: "black";
+    background-color: #FFDB3B;
+}
+
+.sellCarBtn:hover {
+    color: "#FFDB3B";
+    background-color: "black";
+}
+

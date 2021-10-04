@@ -1,4 +1,5 @@
-
+import Button from 'react-bootstrap/Button'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const HeaderNav = () => {
 
@@ -35,6 +36,13 @@ const HeaderNav = () => {
         fontFamily: "Gemunu Libre, sans-serif"
     }
 
+    const sellBtnStyle = {
+        fontSize: "1.7rem",
+        width: "500px",
+        textAlign: "center",
+        fontFamily: "Gemunu Libre, sans-serif"
+    }
+
     return (
         <nav style={navBarStyle}>
             <header style={headerStyle}>
@@ -45,6 +53,11 @@ const HeaderNav = () => {
             </div>
             <div style={signBtnStyle}>
                 Sign Up
+            </div>
+            <div style={sellBtnStyle}>
+                <Button variant='outline-warning' style={{color: "black", borderColor: "black", fontSize: "1.3rem"}}>
+                    Sell your Car
+                </Button>
             </div>
         </nav>
     )
