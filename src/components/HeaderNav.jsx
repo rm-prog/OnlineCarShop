@@ -1,4 +1,5 @@
 import Button from 'react-bootstrap/Button'
+import { BiSearchAlt } from 'react-icons/bi'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const HeaderNav = () => {
@@ -25,21 +26,25 @@ const HeaderNav = () => {
     const logBtnStyle = {
         width: "170px",
         textAlign: "right",
-        fontSize: "1.5rem",
         fontFamily: "Gemunu Libre, sans-serif"
     }
 
     const signBtnStyle = {
         width: "120px",
         textAlign: "center",
-        fontSize: "1.5rem",
         fontFamily: "Gemunu Libre, sans-serif"
     }
 
     const sellBtnStyle = {
-        fontSize: "1.7rem",
-        width: "500px",
-        textAlign: "center",
+        width: "400px",
+        textAlign: "right",
+        paddingRight: "40px",
+        fontFamily: "Gemunu Libre, sans-serif"
+    }
+
+    const searchCarBtnStyle = {
+        width: "200px",
+        textAlign: "left",
         fontFamily: "Gemunu Libre, sans-serif"
     }
 
@@ -49,14 +54,23 @@ const HeaderNav = () => {
                 OnlineCarShop
             </header>
             <div style={logBtnStyle}>
-                Log In
+                <Button variant='light' size='lg' style={{fontSize: "1.4rem"}}>
+                    Log In
+                </Button>
             </div>
             <div style={signBtnStyle}>
-                Sign Up
+                <Button variant='light' size='lg' style={{fontSize: "1.4rem"}}>
+                    Sign Up
+                </Button>
             </div>
             <div style={sellBtnStyle}>
                 <Button variant='outline-warning' style={{color: "black", borderColor: "black", fontSize: "1.3rem"}}>
                     Sell your Car
+                </Button>
+            </div>
+            <div style={searchCarBtnStyle}>
+                <Button variant="outline-warning" style={{color: "black", borderColor: "black", fontSize: "1.3rem"}}>
+                    <BiSearchAlt/> Search Cars
                 </Button>
             </div>
         </nav>
