@@ -1,7 +1,7 @@
 import styles from './styles/App.module.css'
 
 import HeaderNav from "./components/HeaderNav";
-import Button from 'react-bootstrap/Button';
+import Introduction from './components/Introduction';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
@@ -9,9 +9,10 @@ const App = () => {
     // CSS styles
 
     return (
-        <div>
+        <>
           <HeaderNav />
-        </div>
+          <Introduction />
+        </>
     )
 }
 
