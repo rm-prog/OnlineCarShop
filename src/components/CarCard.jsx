@@ -1,29 +1,36 @@
 import { 
-    Card, 
-    CardImg, 
-    CardBody, 
-    CardTitle, 
-    CardText,
-    ListGroup,
-    ListGroupItem    
+    Card,
+    Image   
 } from "react-bootstrap"
 
+import imgSrc from  "../carImages/2018-mclaren-senna-ll-103-1570476637.jpg"
+
 const CarCard = () => {
+
+    // Css Styles
+
+    const cardContainerStyle = {
+        width: '18rem', 
+        display: "inline-block",
+        marginRight: "20px",
+        marginLeft: "20px",
+        minWidth: "240px"
+    }   
+
+    const cardImgStyle = {
+        minWidth: '235px', 
+        height: "200px"
+    }
+
     return (
-        <Card border="warning" style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="../carImages/2018-mclaren-senna-ll-103-1570476637.jpg" style={ { width: '286px', height: "200px" } } />
+        <Card border="warning" style={cardContainerStyle}>
+            <Card.Img as={Image} fluid={true} variant="top" src={imgSrc} rounded style={cardImgStyle} />
             <Card.Body>
-                <Card.Title>Card Title</Card.Title>
+                <Card.Title> McLaren Senna 2009 </Card.Title>
                 <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
+                    Price: 100000$ ; 100000 km, 2.3 Diesel, New Tyres
                 </Card.Text>
             </Card.Body>
-            <ListGroup className="list-group-flush">
-                <ListGroupItem>Cras justo odio</ListGroupItem>
-                <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                <ListGroupItem>Vestibulum at eros</ListGroupItem>
-            </ListGroup>
             <Card.Body>
                 <Card.Link href="#">Card Link</Card.Link>
                 <Card.Link href="#">Another Link</Card.Link>
