@@ -1,7 +1,7 @@
 import CarCard from "./CarCard"
 import { 
-    FaArrowAltCircleLeft,
-    FaArrowAltCircleRight
+   FaArrowAltCircleLeft,
+   FaArrowAltCircleRight
 } from "react-icons/fa"
 
 
@@ -20,18 +20,28 @@ const Slider = ( { cardsInfo } ) => {
         paddingBottom: "20px",
         display: "flex",
         justifyContent: "space-around",
-        overflowX: "hidden"
+        overflowX: "hidden",
+        alignItems: "center",
+    }
+
+    const arrowStyle = {
+        fontSize: "2rem",
+        marginLeft: "30px",
+        cursor: "pointer",
+        position: "relative",
+        zIndex: "1"
     }
 
     return (
         <div style={sliderContainerStyle}>
-            <FaArrowAltCircleLeft />
+            <div> 
+                <FaArrowAltCircleLeft style={arrowStyle} /> 
+            </div>
             <CarCard />
             <CarCard />
             <CarCard />
             <CarCard />
             <CarCard />
-            <FaArrowAltCircleRight />
         </div>
     )
 }

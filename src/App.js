@@ -5,6 +5,8 @@ import Introduction from './components/Introduction';
 import Slider from './components/Slider';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import { FaArrowAltCircleLeft } from "react-icons/fa"
+
 const App = () => {
 
     // CSS styles
