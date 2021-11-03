@@ -18,3 +18,25 @@ body {
     background-color: "black";
 }
 
+
+/* width */
+#cardsContainer::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+#cardsContainer::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey; 
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+#cardsContainer::-webkit-scrollbar-thumb {
+    background: #504B48; 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+#cardsContainer::-webkit-scrollbar-thumb:hover {
+    background: #504B48; 
+  }

@@ -1,3 +1,7 @@
+import { useState } from "react"
+
+import styles from "../styles/App.module.css"
+
 import CarCard from "./CarCard"
 import { 
    FaArrowAltCircleLeft,
@@ -10,38 +14,67 @@ const Slider = ( { cardsInfo } ) => {
 
     // @param CardsInfo will contain info that will fill the carCards
 
+    // State variables
+
+    const [cardsRelativePos, setCardsRelativePos] = useState(0);
+
+    // Functions
+
+    const moveSliderToRight = () => {
+        setCardsRelativePos(cardsRelativePos-50);
+    }
+
+    const moveSliderToLeft = () => {
+        if (cardsRelativePos < 0) setCardsRelativePos(cardsRelativePos+50);
+    }
+
     // CSS styles
 
     const sliderContainerStyle = {
         marginTop: "20px",
         marginBottom: "20px",
-        paddingLeft: "80px",
         paddingTop: "20px",
-        paddingBottom: "20px",
+        padding: "10px",
         display: "flex",
-        justifyContent: "space-around",
         overflowX: "hidden",
         alignItems: "center",
+        width: "100%",
+        position: "relative"
     }
 
     const arrowStyle = {
         fontSize: "2rem",
-        marginLeft: "30px",
         cursor: "pointer",
-        position: "relative",
-        zIndex: "1"
+        zIndex: "1",
+    }
+
+    const cardsContainerStyle = {
+        display: "flex",
+        justifyContent: "space-around",
+        overflowX: "scroll",
+        alignItems: "center",
+
     }
 
     return (
         <div style={sliderContainerStyle}>
-            <div> 
-                <FaArrowAltCircleLeft style={arrowStyle} /> 
+           { 
+              /*  <div> 
+                    <FaArrowAltCircleLeft style={arrowStyle} onClick={moveSliderToLeft} /> 
+                </div> */
+            }
+            <div style={cardsContainerStyle} id={styles.cardsContainer} >
+                <CarCard />
+                <CarCard />
+                <CarCard />
+                <CarCard />
+                <CarCard />
             </div>
-            <CarCard />
-            <CarCard />
-            <CarCard />
-            <CarCard />
-            <CarCard />
+            {
+              /*  <div> 
+                    <FaArrowAltCircleRight style={arrowStyle} onClick={moveSliderToRight} />
+                </div> */
+            }   
         </div>
     )
 }
