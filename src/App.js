@@ -17,7 +17,7 @@ const App = () => {
           <Introduction />
           <Slider />
         </>
-    )
+        )
 }
 
 export default App;

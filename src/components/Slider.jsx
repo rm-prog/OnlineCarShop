@@ -33,27 +33,24 @@ const Slider = ( { cardsInfo } ) => {
     const sliderContainerStyle = {
         marginTop: "20px",
         marginBottom: "20px",
-        paddingTop: "20px",
         padding: "10px",
         display: "flex",
         overflowX: "hidden",
-        alignItems: "center",
         width: "100%",
-        position: "relative"
+        position: "relative",
     }
 
-    const arrowStyle = {
-        fontSize: "2rem",
-        cursor: "pointer",
-        zIndex: "1",
-    }
+    // const arrowStyle = {
+    //     fontSize: "2rem",
+    //     cursor: "pointer",
+    //     zIndex: "1",
+    // }
 
     const cardsContainerStyle = {
         display: "flex",
-        justifyContent: "space-around",
         overflowX: "scroll",
-        alignItems: "center",
-
+        margin: "0 auto",
+        padding: "15px",
     }
 
     return (
@@ -64,6 +61,8 @@ const Slider = ( { cardsInfo } ) => {
                 </div> */
             }
             <div style={cardsContainerStyle} id={styles.cardsContainer} >
+                <CarCard />
+                <CarCard />
                 <CarCard />
                 <CarCard />
                 <CarCard />

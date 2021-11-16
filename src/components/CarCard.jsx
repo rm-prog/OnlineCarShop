@@ -14,7 +14,7 @@ const CarCard = () => {
         display: "inline-block",
         marginRight: "20px",
         marginLeft: "20px",
-        minWidth: "240px"
+        minWidth: "240px",
     }   
 
     const cardImgStyle = {
