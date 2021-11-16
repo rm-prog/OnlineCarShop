@@ -33,7 +33,7 @@ const Slider = ( { cardsInfo } ) => {
     const sliderContainerStyle = {
         marginTop: "20px",
         marginBottom: "20px",
-        padding: "10px",
+        padding: "30px",
         display: "flex",
         overflowX: "hidden",
         width: "100%",
