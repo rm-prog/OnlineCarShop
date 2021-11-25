@@ -3,12 +3,6 @@ import { useState } from "react"
 import styles from "../styles/App.module.css"
 
 import CarCard from "./CarCard"
-import { 
-   FaArrowAltCircleLeft,
-   FaArrowAltCircleRight
-} from "react-icons/fa"
-
-
 
 const Slider = ( { cardsInfo, sliderTitle } ) => {
 
@@ -31,20 +25,13 @@ const Slider = ( { cardsInfo, sliderTitle } ) => {
     // CSS styles
 
     const sliderContainerStyle = {
-        marginTop: "15px",
-        marginBottom: "20px",
+        marginTop: "7px",
         padding: "30px",
         // display: "flex",
         overflowX: "hidden",
         width: "100%",
         position: "relative",
     }
-
-    // const arrowStyle = {
-    //     fontSize: "2rem",
-    //     cursor: "pointer",
-    //     zIndex: "1",
-    // }
 
     const cardsContainerStyle = {
         display: "flex",
@@ -59,11 +46,6 @@ const Slider = ( { cardsInfo, sliderTitle } ) => {
 
     return (
         <div style={sliderContainerStyle}>
-           { 
-              /*  <div> 
-                    <FaArrowAltCircleLeft style={arrowStyle} onClick={moveSliderToLeft} /> 
-                </div> */
-            }
             <h2>
                 {sliderTitle}
             </h2>
@@ -75,12 +57,7 @@ const Slider = ( { cardsInfo, sliderTitle } ) => {
                 <CarCard />
                 <CarCard />
                 <CarCard />
-            </div>
-            {
-              /*  <div> 
-                    <FaArrowAltCircleRight style={arrowStyle} onClick={moveSliderToRight} />
-                </div> */
-            }   
+            </div> 
             <hr style={hrStyle} />
         </div>
     )
