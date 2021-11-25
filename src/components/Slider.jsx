@@ -10,7 +10,7 @@ import {
 
 
 
-const Slider = ( { cardsInfo } ) => {
+const Slider = ( { cardsInfo, sliderTitle } ) => {
 
     // @param CardsInfo will contain info that will fill the carCards
 
@@ -31,10 +31,10 @@ const Slider = ( { cardsInfo } ) => {
     // CSS styles
 
     const sliderContainerStyle = {
-        marginTop: "20px",
+        marginTop: "15px",
         marginBottom: "20px",
         padding: "30px",
-        display: "flex",
+        // display: "flex",
         overflowX: "hidden",
         width: "100%",
         position: "relative",
@@ -52,6 +52,10 @@ const Slider = ( { cardsInfo } ) => {
         margin: "0 auto",
         padding: "15px",
     }
+   const hrStyle = {
+        borderTop: "2px dashed black",
+        marginTop: "30px"
+   }
 
     return (
         <div style={sliderContainerStyle}>
@@ -60,6 +64,9 @@ const Slider = ( { cardsInfo } ) => {
                     <FaArrowAltCircleLeft style={arrowStyle} onClick={moveSliderToLeft} /> 
                 </div> */
             }
+            <h2>
+                {sliderTitle}
+            </h2>
             <div style={cardsContainerStyle} id={styles.cardsContainer} >
                 <CarCard />
                 <CarCard />
@@ -74,6 +81,7 @@ const Slider = ( { cardsInfo } ) => {
                     <FaArrowAltCircleRight style={arrowStyle} onClick={moveSliderToRight} />
                 </div> */
             }   
+            <hr style={hrStyle} />
         </div>
     )
 }

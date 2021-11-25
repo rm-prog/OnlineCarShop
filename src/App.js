@@ -15,7 +15,8 @@ const App = () => {
         <>
           <HeaderNav />
           <Introduction />
-          <Slider />
+          <Slider sliderTitle="Trending Cars"/>
+          <Slider sliderTitle="Newest"/>
         </>
         )
 }
