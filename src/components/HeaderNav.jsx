@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button'
 import { BiSearchAlt } from 'react-icons/bi'
+import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const HeaderNav = () => {
@@ -54,24 +55,32 @@ const HeaderNav = () => {
                 OnlineCarShop
             </header>
             <div style={logBtnStyle}>
-                <Button variant='light' size='lg' style={{fontSize: "1.4rem"}}>
-                    Log In
-                </Button>
+                <Link to='/login'>
+                    <Button variant='light' size='lg' style={{fontSize: "1.4rem"}}>
+                        Log In
+                    </Button>
+                </Link>
             </div>
             <div style={signBtnStyle}>
-                <Button variant='light' size='lg' style={{fontSize: "1.4rem"}}>
-                    Sign Up
-                </Button>
+                <Link to="/signup">
+                    <Button variant='light' size='lg' style={{fontSize: "1.4rem"}}>
+                        Sign Up
+                    </Button>
+                </Link>
             </div>
             <div style={sellBtnStyle}>
-                <Button variant='outline-warning' style={{color: "black", borderColor: "black", fontSize: "1.3rem"}}>
-                    Sell your Car
-                </Button>
+                <Link to="/sell">
+                    <Button variant='outline-warning' style={{color: "black", borderColor: "black", fontSize: "1.3rem"}}>
+                        Sell your Car
+                    </Button>
+                </Link>
             </div>
             <div style={searchCarBtnStyle}>
-                <Button variant="outline-warning" style={{color: "black", borderColor: "black", fontSize: "1.3rem"}}>
-                    <BiSearchAlt/> Search Cars
-                </Button>
+                <Link to="/search">
+                    <Button variant="outline-warning" style={{color: "black", borderColor: "black", fontSize: "1.3rem"}}>
+                        <BiSearchAlt/> Search Cars
+                    </Button>
+                </Link>
             </div>
         </nav>
     )

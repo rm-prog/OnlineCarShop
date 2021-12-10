@@ -10,17 +10,7 @@ const Slider = ( { cardsInfo, sliderTitle } ) => {
 
     // State variables
 
-    const [cardsRelativePos, setCardsRelativePos] = useState(0);
-
     // Functions
-
-    const moveSliderToRight = () => {
-        setCardsRelativePos(cardsRelativePos-50);
-    }
-
-    const moveSliderToLeft = () => {
-        if (cardsRelativePos < 0) setCardsRelativePos(cardsRelativePos+50);
-    }
 
     // CSS styles
 

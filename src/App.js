@@ -1,25 +1,29 @@
 import styles from './styles/App.module.css'
 
-import HeaderNav from "./components/HeaderNav";
-import Introduction from './components/Introduction';
-import Slider from './components/Slider';
-import Footer from './components/Footer';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { 
+  BrowserRouter as Router, 
+  Route, 
+  Routes, 
+  Link
+} 
+  from 'react-router-dom' 
 
-import { FaArrowAltCircleLeft } from "react-icons/fa"
+import Home from './routes/Home'
+import SearchCar from './routes/SearchCar'
+import HeaderNav from './components/HeaderNav'
 
 const App = () => {
 
     // CSS styles
 
     return (
-        <>
+        <Router>
           <HeaderNav />
-          <Introduction />
-          <Slider sliderTitle="Trending Cars"/>
-          <Slider sliderTitle="Newest"/>
-          <Footer />
-        </>
+          <Routes>
+            <Route exact path="/" element={<Home/>} />
+            <Route exact path="/search" element={<SearchCar/>} />
+          </Routes>
+        </Router>
         )
 }
 
