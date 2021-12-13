@@ -51,9 +51,11 @@ const HeaderNav = () => {
 
     return (
         <nav style={navBarStyle}>
-            <header style={headerStyle}>
-                OnlineCarShop
-            </header>
+            <Link to='/' style={{ color: "inherit",textDecoration: "none" }}>
+                <header style={headerStyle}>
+                    OnlineCarShop
+                </header>
+            </Link>
             <div style={logBtnStyle}>
                 <Link to='/login'>
                     <Button variant='light' size='lg' style={{fontSize: "1.4rem"}}>
