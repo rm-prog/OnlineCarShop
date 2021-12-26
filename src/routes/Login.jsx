@@ -5,6 +5,7 @@ import { Form,
         FormText,
         Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
+import { SocialIcon } from "react-social-icons"
 
 const Login = () => {
 
@@ -23,6 +24,17 @@ const Login = () => {
         width: "50%",
         display: "inline-block",
         margin: "5px"
+    }
+
+    const socialIconStyle = {
+        margin: "15px",
+        marginTop: "40px",
+        marginBottom: "30px"
+    }
+
+    const socialIconsContainerStyle = {
+        display: "flex",
+        justifyContent: "center",
     }
 
     return (
@@ -50,6 +62,11 @@ const Login = () => {
                             Submit
                         </Button>
                     </Link>
+                    <div style={socialIconsContainerStyle}>
+                        <SocialIcon style={socialIconStyle} url="https://www.facebook.com/"/>
+                        <SocialIcon style={socialIconStyle} url="https://www.instagram.com/"/>
+                        <SocialIcon style={socialIconStyle} url="https://www.twitter.com/"/>
+                    </div>
                 </Form>
             </div>
         </center>
