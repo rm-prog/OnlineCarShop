@@ -7,7 +7,7 @@ const Introduction = () => {
         background: "linear-gradient(0deg, rgba(110,107,107,1) 0%, rgba(20,20,19,1) 100%)",
         color: "white",
         textAlign: "center",
-        padding: "40px",
+        padding: "40px"
     }
 
     return (

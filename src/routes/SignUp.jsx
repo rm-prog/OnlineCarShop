@@ -1,13 +1,13 @@
 import { Form, 
-        FormGroup, 
-        FormLabel, 
-        FormControl,
-        FormText,
-        Button } from "react-bootstrap"
+    FormGroup, 
+    FormLabel, 
+    FormControl,
+    FormText,
+    Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import { SocialIcon } from "react-social-icons"
 
-const Login = () => {
+const SignUp = () => {
 
     //  CSS styles 
 
@@ -41,7 +41,15 @@ const Login = () => {
         <center>
             <div style={formStyle}>
                 <Form>
-                    <h2>Login</h2>
+                    <h2>Sign Up</h2>
+                    <FormGroup className="mb-3">
+                        <FormLabel>First Name:</FormLabel>
+                        <FormControl type="text" style={formControlStyle} placeholder="Enter your first name" /> <br/>
+                    </FormGroup>
+                    <FormGroup className="mb-3">
+                        <FormLabel>Last Name:</FormLabel>
+                        <FormControl type="text" style={formControlStyle} placeholder="Enter your last name" /> <br/>
+                    </FormGroup>
                     <FormGroup className="mb-3">
                         <FormLabel>Email address:</FormLabel>
                         <FormControl type="email" style={formControlStyle} placeholder="Enter email" /> <br />
@@ -73,4 +81,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default SignUp
