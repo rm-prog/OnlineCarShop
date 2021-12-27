@@ -13,7 +13,7 @@ const HeaderNav = () => {
         flexDirection: "row",
         alignItems: "baseline",
         padding: "10px",
-        backgroundColor: "#FFDB3B"
+        backgroundColor: "#FFD53C"
     }
 
     const headerStyle = {
