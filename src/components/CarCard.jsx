@@ -4,8 +4,6 @@ import {
     Image   
 } from "react-bootstrap"
 
-// import imgSrc from  "../carImages/2018-mclaren-senna-ll-103-1570476637.jpg"
-
 const CarCard = ( { carInfo } ) => {
 
     // Css Styles
@@ -26,18 +24,6 @@ const CarCard = ( { carInfo } ) => {
     
 
     // State Variables
-
-    // let [image, setImage] = useState(carInfo.carPhoto)
-
-    // const loadImage = imageName => {
-    //     import(carInfo.carPhoto).then(image => {
-    //       this.setState({
-    //         image
-    //       });
-    //     });
-    //   };
-
-    // const [image, setImage] = useState(loadImage(carInfo.carPhoto))
 
     const [image, setImage] = useState(null)
 
