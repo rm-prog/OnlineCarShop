@@ -40,13 +40,11 @@ const Slider = ( { cardsInfo, sliderTitle } ) => {
                 {sliderTitle}
             </h2>
             <div style={cardsContainerStyle} id={styles.cardsContainer} >
-                <CarCard />
-                <CarCard />
-                <CarCard />
-                <CarCard />
-                <CarCard />
-                <CarCard />
-                <CarCard />
+                {
+                    cardsInfo.map((cardInfo) => (
+                        <CarCard carInfo={cardInfo}/>
+                    ))
+                }
             </div> 
             <hr style={hrStyle} />
         </div>

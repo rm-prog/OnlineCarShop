@@ -1,11 +1,12 @@
+import { useState } from "react"
 import { 
     Card,
     Image   
 } from "react-bootstrap"
 
-import imgSrc from  "../carImages/2018-mclaren-senna-ll-103-1570476637.jpg"
+// import imgSrc from  "../carImages/2018-mclaren-senna-ll-103-1570476637.jpg"
 
-const CarCard = () => {
+const CarCard = ( { carInfo } ) => {
 
     // Css Styles
 
@@ -22,13 +23,35 @@ const CarCard = () => {
         height: "200px"
     }
 
+    
+
+    // State Variables
+
+    // let [image, setImage] = useState(carInfo.carPhoto)
+
+    // const loadImage = imageName => {
+    //     import(carInfo.carPhoto).then(image => {
+    //       this.setState({
+    //         image
+    //       });
+    //     });
+    //   };
+
+    // const [image, setImage] = useState(loadImage(carInfo.carPhoto))
+
+    const [image, setImage] = useState(null)
+
+    import("../carImages/2018-mclaren-senna-ll-103-1570476637.jpg").then(({ default: imgSrc }) => {
+        setImage(imgSrc)
+    })
+
     return (
         <Card border="warning" style={cardContainerStyle}>
-            <Card.Img as={Image} fluid={true} variant="top" src={imgSrc} rounded style={cardImgStyle} />
+            <Card.Img as={Image} fluid={true} variant="top" src={image} rounded style={cardImgStyle} />
             <Card.Body>
-                <Card.Title> McLaren Senna 2009 </Card.Title>
+                <Card.Title> {carInfo.carName} </Card.Title>
                 <Card.Text>
-                    Price: 100000$ ; 100000 km, 2.3 Diesel, New Tyres
+                    {carInfo.carInfo}
                 </Card.Text>
             </Card.Body>
             <Card.Body>
