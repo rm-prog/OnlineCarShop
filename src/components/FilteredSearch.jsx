@@ -1,7 +1,13 @@
+import { useRef } from 'react'
+
 import { BiSearchAlt } from 'react-icons/bi'
 import { FormSelect } from "react-bootstrap"
 
-const FilteredSearch = () => {
+import carsInfoJson from "../carLists/cars.json"
+
+const FilteredSearch = ( { carsInfo, setCarsInfo } ) => {
+
+    const carsInfoDefault = carsInfoJson
 
     // CSS styles
 
@@ -18,10 +24,24 @@ const FilteredSearch = () => {
         borderRadius: "5px"
     }
 
+    // Functions
+
+    // Example of how to filter cars array
+    const filterBtnClick = (year) => {
+        carsInfo = carsInfoDefault
+        setCarsInfo(carsInfo.filter((car) => {
+            return car.year == year 
+        }))
+    }
+
+    // Ref Elements
+
+    const minYearSelect = useRef(null)
+
     return (
         <div style={containerStyle}>
             <BiSearchAlt  style={ { fontSize: "2rem" } } />
-            Minimum Year: <FormSelect size='sm' style={ { display: "inline-block", width: "100px", margin: "10px" } } >
+            Minimum Year: <FormSelect ref={minYearSelect} size='sm' style={ { display: "inline-block", width: "100px", margin: "10px" } } >
                 <option> 2005 </option>
                 <option> 2006 </option>
                 <option> 2007 </option>
@@ -44,6 +64,7 @@ const FilteredSearch = () => {
                 <option> Ford </option>
                 <option> Volkswagen </option>
             </FormSelect>
+            <button onClick={() => filterBtnClick(minYearSelect.current.value)}>Filter</button>
         </div>
     )
 }

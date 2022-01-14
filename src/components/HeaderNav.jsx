@@ -77,13 +77,13 @@ const HeaderNav = () => {
                     </Button>
                 </Link>
             </div>
-            <div style={searchCarBtnStyle}>
+            {/* <div style={searchCarBtnStyle}>
                 <Link to="/search">
                     <Button variant="outline-warning" style={{color: "black", borderColor: "black", fontSize: "1.3rem"}}>
                         <BiSearchAlt/> Search Cars
                     </Button>
                 </Link>
-            </div>
+            </div> */}
         </nav>
     )
 }
