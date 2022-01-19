@@ -24,23 +24,30 @@ const FilteredSearch = ( { carsInfo, setCarsInfo } ) => {
         borderRadius: "5px"
     }
 
+    const searchIconStyle = {
+        fontSize: "2rem",
+        cursor: "pointer"
+    }
+
     // Functions
 
     // Example of how to filter cars array
-    const filterBtnClick = (year) => {
+    const filterBtnClick = (minYear, maxYear) => {
         carsInfo = carsInfoDefault
         setCarsInfo(carsInfo.filter((car) => {
-            return car.year == year 
+            return car.year >= minYear &&
+                   car.year <= maxYear 
         }))
     }
 
     // Ref Elements
 
     const minYearSelect = useRef(null)
+    const maxYearSelect = useRef(null)
 
     return (
         <div style={containerStyle}>
-            <BiSearchAlt  style={ { fontSize: "2rem" } } />
+            <BiSearchAlt onClick={() => filterBtnClick(minYearSelect.current.value, maxYearSelect.current.value)} style={searchIconStyle} />
             Minimum Year: <FormSelect ref={minYearSelect} size='sm' style={ { display: "inline-block", width: "100px", margin: "10px" } } >
                 <option> 2005 </option>
                 <option> 2006 </option>
@@ -49,7 +56,7 @@ const FilteredSearch = ( { carsInfo, setCarsInfo } ) => {
                 <option> 2009 </option>
                 <option> 2010 </option> 
             </FormSelect>
-            Maximum Year: <FormSelect size='sm' style={ { display: "inline-block", width: "100px", margin: "10px" } } >
+            Maximum Year: <FormSelect ref={maxYearSelect} size='sm' style={ { display: "inline-block", width: "100px", margin: "10px" } } >
                 <option> 2005 </option>
                 <option> 2006 </option>
                 <option> 2007 </option>
@@ -64,7 +71,6 @@ const FilteredSearch = ( { carsInfo, setCarsInfo } ) => {
                 <option> Ford </option>
                 <option> Volkswagen </option>
             </FormSelect>
-            <button onClick={() => filterBtnClick(minYearSelect.current.value)}>Filter</button>
         </div>
     )
 }
