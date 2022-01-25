@@ -3,6 +3,7 @@ import {
     Card,
     Image   
 } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 const CarCard = ( { carInfo } ) => {
 
@@ -41,8 +42,9 @@ const CarCard = ( { carInfo } ) => {
                 </Card.Text>
             </Card.Body>
             <Card.Body>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
+                <Link to={`/car/${carInfo.id}/${carInfo.carName}`} style={{ color: "inherit",textDecoration: "none" }}>
+                    <Card.Link>Card Link</Card.Link>
+                </Link>
             </Card.Body>
         </Card>
     )
