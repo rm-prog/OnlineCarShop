@@ -24,7 +24,7 @@ const CarCard = ( { carInfo } ) => {
 
     return (
         <Card border="warning" style={cardContainerStyle}>
-            <Card.Img as={Image} fluid={true} variant="top" src={carInfo.carPhoto} rounded style={cardImgStyle} />
+            <Card.Img as={Image} fluid={true} variant="top" src={carInfo.carPhoto1} rounded style={cardImgStyle} />
             <Card.Body>
                 <Card.Title> {carInfo.carName} </Card.Title>
                 <Card.Text>

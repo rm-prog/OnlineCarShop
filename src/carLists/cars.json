@@ -7,7 +7,11 @@
         "mileage": 60000,
         "fuel": "Petrol",
         "carInfo": "Price: 100000$ ; 60000 km, 2.3 Petrol, New Tyres",
-        "carPhoto": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg"
+        "carPhoto1": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "carPhoto2": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "carPhoto3": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "contactNumber": "069234568",
+        "contactEmail": "sellcar@gmail.com"
     },
     {
         "id": 2,
@@ -17,7 +21,11 @@
         "mileage": 40000,
         "fuel": "Diesel",
         "carInfo": "Price: 6000$ ; 40000 km, 2.0 Diesel",
-        "carPhoto": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg"
+        "carPhoto1": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "carPhoto2": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "carPhoto3": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "contactNumber": "069234568",
+        "contactEmail": "sellcar@gmail.com"
     },
     {
         "id": 3,
@@ -27,7 +35,11 @@
         "mileage": 40000,
         "fuel": "Diesel",
         "carInfo": "Price: 6000$ ; 150000 km, 2.0 Diesel",
-        "carPhoto": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg"
+        "carPhoto1": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "carPhoto2": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "carPhoto3": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "contactNumber": "069234568",
+        "contactEmail": ""
     },
     {
         "id": 4,
@@ -37,7 +49,11 @@
         "mileage": 40000,
         "fuel": "Diesel",
         "carInfo": "Price: 6000$ ; 150000 km, 2.0 Diesel",
-        "carPhoto": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg"
+        "carPhoto1": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "carPhoto2": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "carPhoto3": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "contactNumber": "069234568",
+        "contactEmail": ""
     },
     {
         "id": 5,
@@ -47,7 +63,11 @@
         "mileage": 40000,
         "fuel": "Diesel",
         "carInfo": "Price: 6000$ ; 150000 km, 2.0 Diesel",
-        "carPhoto": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg"
+        "carPhoto1": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "carPhoto2": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "carPhoto3": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "contactNumber": "069234568",
+        "contactEmail": "sellcar@gmail.com"
     },
     {
         "id": 6,
@@ -57,7 +77,11 @@
         "mileage": 40000,
         "fuel": "Diesel",
         "carInfo": "Price: 6000$ ; 150000 km, 2.0 Diesel",
-        "carPhoto": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg"
+        "carPhoto1": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "carPhoto2": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "carPhoto3": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "contactNumber": "069234568",
+        "contactEmail": "sellcar@gmail.com"
     },
     {   
         "id": 7,
@@ -67,6 +91,10 @@
         "mileage": 40000,
         "fuel": "Diesel",
         "carInfo": "Price: 6000$ ; 150000 km, 2.0 Diesel",
-        "carPhoto": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg"
+        "carPhoto1": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "carPhoto2": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "carPhoto3": "/assets/images/2018-mclaren-senna-ll-103-1570476637.jpg",
+        "contactNumber": "069234568",
+        "contactEmail": ""
     }
 ]
