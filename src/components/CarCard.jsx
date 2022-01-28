@@ -22,19 +22,9 @@ const CarCard = ( { carInfo } ) => {
         height: "200px"
     }
 
-    
-
-    // State Variables
-
-    const [image, setImage] = useState(null)
-
-    import("../carImages/2018-mclaren-senna-ll-103-1570476637.jpg").then(({ default: imgSrc }) => {
-        setImage(imgSrc)
-    })
-
     return (
         <Card border="warning" style={cardContainerStyle}>
-            <Card.Img as={Image} fluid={true} variant="top" src={image} rounded style={cardImgStyle} />
+            <Card.Img as={Image} fluid={true} variant="top" src={carInfo.carPhoto} rounded style={cardImgStyle} />
             <Card.Body>
                 <Card.Title> {carInfo.carName} </Card.Title>
                 <Card.Text>
