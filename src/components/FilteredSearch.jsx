@@ -65,7 +65,7 @@ const FilteredSearch = ( { carsInfo, setCarsInfo } ) => {
                    car.price <= parseInt(maxPrice) &&
                    car.mileage >= parseInt(minMileage) &&
                    car.mileage <= parseInt(maxMileage) &&
-                   car.fuel == fuel  
+                   fuel == "Anything" ? true : car.fuel == fuel
         }))
     }
 
@@ -139,10 +139,10 @@ const FilteredSearch = ( { carsInfo, setCarsInfo } ) => {
                     <option> 10000 </option> 
                 </FormSelect>
                 Fuel: <FormSelect ref={fuelSelect} size='sm' style={formSelectStyle} >
+                    <option> Anything </option> 
                     <option> Diesel </option>
                     <option> Petrol </option>
                     <option> Electric </option>
-                    <option> Anything </option> 
                 </FormSelect>
             </div>
         </div>
