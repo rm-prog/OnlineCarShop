@@ -4,7 +4,7 @@ import styles from "../styles/App.module.css"
 
 import CarCard from "./CarCard"
 
-const Slider = ( { cardsInfo, sliderTitle } ) => {
+const Slider = ( { cardsInfo, sliderTitle, sliderDisplay } ) => {
 
     // @param CardsInfo will contain info that will fill the carCards
 
@@ -21,6 +21,7 @@ const Slider = ( { cardsInfo, sliderTitle } ) => {
         overflowX: "hidden",
         width: "100%",
         position: "relative",
+        display: sliderDisplay
     }
 
     const cardsContainerStyle = {

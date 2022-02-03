@@ -15,6 +15,7 @@ const CarCard = ( { carInfo } ) => {
         marginRight: "20px",
         marginLeft: "20px",
         minWidth: "240px",
+        maxWidth: "260px"
     }   
 
     const cardImgStyle = {

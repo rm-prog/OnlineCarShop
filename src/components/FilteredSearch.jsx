@@ -5,7 +5,7 @@ import { FormSelect } from "react-bootstrap"
 
 import carsInfoJson from "../carLists/cars.json"
 
-const FilteredSearch = ( { carsInfo, setCarsInfo } ) => {
+const FilteredSearch = ( { carsInfo, setCarsInfo, setSliderDisplay, setListDisplay } ) => {
 
     const carsInfoDefault = carsInfoJson
 
@@ -33,13 +33,6 @@ const FilteredSearch = ( { carsInfo, setCarsInfo } ) => {
         // width: "100%"
     }
 
-    const columnStyle = {
-        display: "flex",
-        flexDirection: "column",
-        flexBasis: "100%",
-        flex: "1"
-    }
-
     const searchIconStyle = {
         fontSize: "2.5rem",
         cursor: "pointer",
@@ -54,7 +47,8 @@ const FilteredSearch = ( { carsInfo, setCarsInfo } ) => {
 
     // Functions
 
-    // Example of how to filter cars array
+    // filter cars array by all conditions
+    // and hide card Sliders
     const filterBtnClick = (minYear, maxYear, minPrice, maxPrice, minMileage, maxMileage, fuel) => {
         carsInfo = carsInfoDefault
         setCarsInfo(
@@ -67,6 +61,10 @@ const FilteredSearch = ( { carsInfo, setCarsInfo } ) => {
                    car.mileage <= parseInt(maxMileage) &&
                    fuel == "Anything" ? true : car.fuel == fuel
         }))
+        // Set display of card Sliders to none
+        // and display of list of cars to grid
+        setSliderDisplay("none")
+        setListDisplay("grid")
     }
 
     // Ref Elements
